@@ -8,13 +8,18 @@ namespace App1
     ///
     /// This will work in Debug builds, but not in Release builds (with either 'optimize code' or '.net native compiler' enabled or disabled).
     /// </summary>
-    public abstract partial class AbstractPage : Page
+    public partial class AbstractPage : Page//, IAbstractPage
     {
         public virtual string AbstractName { get; } = "This does NOT work in release build.";
 
-        public AbstractPage()
-        {
-            this.InitializeComponent();
-        }
+        //public AbstractPage()
+        //{
+        //    this.InitializeComponent();
+        //}
     }
+
+    //public interface IAbstractPage
+    //{
+    //    string AbstractName { get; }
+    //}
 }

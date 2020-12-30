@@ -1,11 +1,21 @@
 ﻿namespace App1
 {
-    public class AbstractPage1 : AbstractPage
+    public partial class AbstractPage1 : AbstractPage
     {
-        public override string AbstractName => $"[{GetType().Name}] {base.AbstractName}";
+        public override string AbstractName => $"[{this.GetType().Name}] {base.AbstractName}";
+
+        public AbstractPage1()
+        {
+            this.InitializeComponent();
+        }
     }
-    public class AbstractPage2 : AbstractPage
+    public partial class AbstractPage2 : AbstractPage
     {
-        public override string AbstractName => $"[{GetType().Name}] {base.AbstractName}";
+        public override string AbstractName => $"[{this.GetType().Name}] {base.AbstractName}";
+
+        public AbstractPage2()
+        {
+            this.InitializeComponent();
+        }
     }
 }
